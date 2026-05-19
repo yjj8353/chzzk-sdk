@@ -23,13 +23,16 @@
     "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "typecheck": "tsc --noEmit",
-    "test": "echo \"No tests yet\""
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "AGPL-3.0-only",
   "sideEffects": false,
   "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.9",
     "tsup": "^8.5.1",
     "typescript": "^6.0.3"
   }
