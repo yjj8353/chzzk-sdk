@@ -9,7 +9,7 @@ export default [
   },
   js.configs.recommended,
   {
-    files: ["jest.config.js"],
+    files: ["jest.config.cjs"],
     languageOptions: {
       sourceType: "commonjs",
       globals: {
