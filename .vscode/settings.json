@@ -7,7 +7,5 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": [
-    "CHZZK"
-  ]
+  "cSpell.words": ["CHZZK"]
 }
