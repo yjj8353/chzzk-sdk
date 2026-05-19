@@ -1,6 +1,6 @@
 {
   "name": "chzzk-sdk",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.1",
   "description": "CHZZK SDK",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -16,6 +16,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "tag": "alpha"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
