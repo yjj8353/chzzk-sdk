@@ -6,6 +6,7 @@ import { getAuthCode } from "../../../utils/auth";
 const RUN = process.env.RUN_MANUAL_TEST === "true";
 const CLIENT_ID = process.env.CLIENT_ID || "";
 
+// 수동 테스트: 인증 코드를 실제로 받아오는지 확인
 describe("auth.ts 테스트", () => {
   const manualTest = RUN ? test : test.skip;
 

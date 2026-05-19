@@ -1,5 +1,6 @@
 import http from "node:http";
 import { spawn } from "node:child_process";
+import crypto from "node:crypto";
 import process from "node:process";
 import { clearTimeout, setTimeout } from "node:timers";
 
@@ -13,7 +14,7 @@ export function getAuthCode(
   const CHZZK_INTERLOCK_URL = "https://chzzk.naver.com/account-interlock";
 
   // CSRF 공격 방지용 state 생성
-  const state = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  const state = crypto.randomBytes(32).toString("base64url");
 
   // 운영체제 감지
   const platform = process.platform;
