@@ -10,7 +10,7 @@ export function getAuthCode(
   host: string = "127.0.0.1",
   port: string | number = 8080,
   path: string = "/"
-): Promise<string> {
+): Promise<string[]> {
   const CHZZK_INTERLOCK_URL = "https://chzzk.naver.com/account-interlock";
 
   // CSRF 공격 방지용 state 생성
@@ -64,7 +64,7 @@ export function getAuthCode(
       settled = true;
       clearTimeout(timer);
       server.close();
-      resolve(code);
+      resolve([code, state]);
     }
 
     // 인증 실패 시 서버 종료 및 에러 반환
